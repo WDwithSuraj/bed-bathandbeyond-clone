@@ -11,6 +11,7 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./favicon/android-chrome-512x512.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Login | Bath Kit</title>
 </head>
 <body>
@@ -19,6 +20,7 @@
                 <div class="s-backButton">
                         <i class="fa-solid fa-chevron-left"></i>
                         Back
+                        
                 </div>
         </div>
     </header>
@@ -30,29 +32,25 @@
                     </div>
                     <div class="s-input-conatiner">
                         <div class="s-input-area">
-                                <h2>sign in or create</h2>
+                                <h2>create account</h2>
                                 <div class="s-input-tag">
                                     <input type="email" placeholder="*Email" id="s-email" required>
                                 </div>
+                                <div class="s-input-tag">
+                                    <input type="text" placeholder="*First Name" id="s-firstName" required>
+                                </div>
+                                <div class="s-input-tag">
+                                    <input type="text" placeholder="*Last Name" id="s-lastName" required>
+                                </div>
+                                <div class="s-input-tag">
+                                    <input type="tel" placeholder="*Phone Number" id="s-phoneNum" required>
+                                </div>
+                                <div class="s-input-tag">
+                                    <input type="password" placeholder="*Password" id="s-password" required>
+                                </div>
                                 <div class="s-input-continue-btn">
-                                    <button id="continue-btn">Continue</button>
+                                    <button id="creatAccount-btn">Create an Account</button>
                                 </div>
-                                <div class="s-partion">
-                                    <div class="s-line"></div><b>OR</b>
-                                    <div class="s-line"></div>
-                                </div>
-                                <button class="s-continueWithApple, s-signUp">
-                                    <i class="fa-brands fa-apple"></i>
-                                        Continue with Apple
-                                </button>
-                                <button class="s-continueWithGoogle s-signUp">
-                                    <i class="fa-brands fa-google"></i>
-                                        Continue with Google
-                                </button>
-                                <button class="s-continueWithFacebbok, s-signUp">
-                                    <i class="fa-brands fa-square-facebook"></i>
-                                        Continue with Facebook
-                                </button>
                                 <div class="s-term-condition">
                                     By continuing you agree to enroll in and to the Terms of our Welcome Rewards <br> Program. For information on our privacy practices, please visit our <br>Privacy Policy. California residents: view our Notice of Financial Incentive here.
                                 </div>
@@ -64,6 +62,6 @@
 
 
 
-    <script src="./scripts/signup-page.js" type="module"></script>
+    <script src="./scripts/signup-details.js" type="module"></script>
 </body>
 </html>

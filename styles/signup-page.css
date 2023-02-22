@@ -3,4 +3,115 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+ 
+}
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+.s-header-container{
+    height: 75px;
+    width: 100%;
+    background-color: #1A4E8A;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.s-backButton{
+    margin-left: 15px;
+   background-color: #1A4E8A;
+}
+.fa-chevron-left{
+    background-color: #1A4E8A;
+}
+.s-line{
+    background-color: rgb(182, 179, 179);
+    height: 2px;
+    width: 46%;
+}
+.s-main-container{
+    width: 48%;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid #D6D6D6;
+    margin-bottom: 50px;
+     background-color: white;
+     border-radius: 5px;
+}
+.s-main-container img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.s-input-area {
+    padding: 20px;
+    width: 85%;
+    margin: auto;
+   
+}
+.s-input-area h2{
+    color: #1A4E99;
+    margin-bottom: 30px;
+}
+.s-input-tag input{
+    width: 100%;
+    height: 50px;
+    padding-left: 7px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-color: #D6D6D6;
+    outline-color: #1A4E8A;
+      font-size: 18px;
+}
+.s-input-tag input::placeholder{
+    font-size: 16px;
+}
+.s-partion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.s-input-continue-btn button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #1377c9;
+    font-weight: 500;   
+    font-size: 1rem;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  
+}
+.s-input-continue-btn button:hover{
+    background-color: #2863a5;
+} 
+.s-signUp{
+    width: 100%;
+    height: 55px;
+    border: 1px solid #D6D6D6;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.fa-brands{
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+.s-term-condition{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 30px;
+    padding: 7px;
+}
+.s-backButton {
+    cursor: pointer;
 }
