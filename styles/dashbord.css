@@ -1,0 +1,235 @@
+*{
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    font-family: "Lato", sans-serif;
+    overflow: hidden;
+}
+nav{
+    margin: auto;
+    width: 98%;
+    height: 80px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+  /* border-right: 3px solid red; */
+}
+nav>span{
+    margin-left: 30px;
+}
+nav>img{
+    width: 10%;
+}
+.sidenav>div:nth-child(2){
+    width: 100%;
+    margin-top: 40px;
+    line-height: 50px;
+}
+.sidenav>div:nth-child(3){
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.sidenav>div:nth-child(3)>a>img{
+    margin-right: 10px;
+}
+.sidenav>div:nth-child(3)>a{
+    text-decoration: none;
+    color: white;
+    padding-left:1px;
+
+}
+.sidenav>div:nth-child(3)>a:hover{
+    border-bottom: 1px solid white;
+    border-radius: 3px;
+}
+.sidenav>div:nth-child(2)>a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.sidenav>div:nth-child(2)>a>span{
+    margin-right: 10px;
+}
+.sidenav>div:nth-child(2)>a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+.sidenav>a:nth-child(1){
+    text-decoration: none;
+}
+.sidenav>a:nth-child(1):hover{
+    background-color: #00000000;
+    color: rgb(255, 0, 0);
+    font-weight: 400;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: white;
+}
+@media screen and (max-height: 450px) {
+  .sidenav div{padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#main{
+    width: 98%;
+    height: 709px;
+    margin: auto;
+    margin-top:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main-left{
+    width: 4%;
+    height: 90%;
+    border-right: 1px solid rgb(255, 255, 255);
+    color: white;
+    line-height:70px;
+}
+#main-left>span{
+    font-size: 30px;
+    margin-left: 12px;
+}
+#main-left>span:hover{
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.material-symbols-outlined{
+    background-color: rgba(0, 0, 0, 0);
+}
+#main-mid{
+    width: 54%;
+    height: 100%;
+    overflow: scroll;
+    /* scrollbar-track-color: red; */
+}
+#main-right{
+    border-right: 1px solid rgb(255, 255, 255);
+    padding-left:20px;
+    padding-right: 20px;
+    width: 40%;
+    height: 90%;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+#addForm{
+    border: 1px solid rgb(255, 255, 255);
+    height: 70%;
+    padding: 20px;
+    padding-top: 50px;
+    gap: 10px;
+    margin:40px auto;
+    display: grid;
+    width: 90%;
+    color: white;
+    grid-template-areas: 
+    "ID ID select select"
+    "imgURL imgURL imgURL imgURL"
+    "OR OR OR OR"
+    "imgFile imgFile size size"
+    "title title title title"
+    "price price color1 color1"
+    "submit submit sumbit sut"
+    ;
+    border-radius: 10px;
+}
+#addForm>input:last-child{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#addForm>input{
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#addForm>input:nth-child(5){
+    border:0px;
+}
+#title{
+    color: white;
+    grid-area: title;
+    height: 70px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-top: 13px;
+}
+#addForm>h5{
+    grid-area: OR;
+    color: white;
+}
+#inpID{
+    grid-area: ID;
+    color: white;
+}
+#selCate{
+    color: white;
+    grid-area: select;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+#inpImgURL{
+    color: white;
+    grid-area: imgURL;
+}
+#inpImgFile{
+    grid-area: imgFile;
+}
+#inpSize{
+    color: white;
+    grid-area: size;
+}
+#inpPrice{
+    color: white;
+    grid-area: price;
+}
+#inpColor{
+    color: white;
+    grid-area: color1;
+}
+#inpSubmit{
+    color: white;
+    grid-area: submit;
+    width: 40%;
+    margin-top: 40px;
+    margin-left: 230px;
+}
