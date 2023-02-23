@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="favicon/Bathkit Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/dashbord.css">
+    <title>BATH KIT | dashbord</title>
+</head>
+<body>
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div>
+                <a href="#" onclick="home()">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                    Home
+                </a>
+                <a href="#" onclick="add()">
+                    <span class="material-symbols-outlined">
+                        new_window
+                    </span>
+                    Add Product
+                </a>
+                <a href="#" onclick="update()">
+                    <span class="material-symbols-outlined">
+                        upgrade
+                    </span>
+                    Update Product
+                </a>
+                <a href="#" onclick="delet()">
+                    <span class="material-symbols-outlined">
+                        delete
+                    </span>
+                    Delete Product
+                </a>
+                <a href="#" onclick="users()">
+                    <span class="material-symbols-outlined">
+                        diversity_2
+                    </span>
+                    Users
+                </a>
+                <a href="#" onclick="analytics()">
+                    <span class="material-symbols-outlined">
+                        trending_up
+                    </span>
+                    Analytics
+                </a>
+            </div>
+            <div>
+                <a href="https://github.com/WDwithSuraj/ceaseless-meeting-3728/tree/main" target="_blank">
+                    <img src="icons/github.png" alt="">GitHub
+                </a>
+            </div>
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="material-symbols-outlined">
+            menu
+          </span>
+          <img src="logo/bathkit white&black logo.png" alt="" srcset="">
+          <div>
+
+          </div>
+    </nav>
+    <div id="main">
+        <div id="main-left">
+            <span class="material-symbols-outlined">
+                home
+            </span>
+            <span class="material-symbols-outlined">
+                new_window
+            </span>
+            <span class="material-symbols-outlined">
+                upgrade
+            </span>
+            <span class="material-symbols-outlined">
+                delete
+            </span>
+            <span class="material-symbols-outlined">
+                diversity_2
+            </span>
+            <span class="material-symbols-outlined">
+                trending_up
+            </span>
+        </div>
+        <div id="main-right">
+            <h1>Add Product</h1>
+            <form action="" id="addForm">
+                <input type="number" id="inpID" placeholder="Product ID">
+                <select name="" id="selCate">
+                    <option value="Categories">Categories</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Home Decor">Home Decor</option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Bath">Bath</option>
+                    <option value="Toilet">Toilet</option>
+                </select>
+                <input type="url" name="" id="inpImgURL" placeholder="Image URL">
+                <h5>OR</h5>
+                <input type="file" name="" id="inpImgFile">
+                <input type="number" name="" id="inpSize" placeholder="Size">
+                <textarea name="" id="title" cols="10" rows="10" placeholder="Product Title"></textarea>
+                <input type="number" name="" id="inpPrice" placeholder="Price                                                    .Rs">
+                <input type="text" name="" id="inpColor" placeholder="Color">
+                <input type="submit" value="Submit" id="inpSubmit">
+            </form>
+        </div>
+        <div id="main-mid">
+
+        </div>
+        
+    </div>
+</body>
+</html>
+<script src="scripts/dashbord.js"></script>
