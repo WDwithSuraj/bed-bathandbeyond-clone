@@ -24,6 +24,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 const database = getDatabase(app)
+
 function writeUserData(userId, email, password, firstName, lastName, phone) {
     const db = getDatabase();
     set(ref(db, 'users/' + userId), {
@@ -76,6 +77,9 @@ createAccountBtn.addEventListener('click', () => {
     Swal.fire(
         'congratulation',
         'Your account has been created',
-        'success'
+        'success',
+        setTimeout(() => {
+            location.href = "index.html"
+        }, 3000)
     )
 })

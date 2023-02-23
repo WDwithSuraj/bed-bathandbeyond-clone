@@ -31,13 +31,13 @@
             </div>
             <div id="user-account">
                 <i class="fa-regular fa-user"></i>
-                <h3>Login | Register</h3>
-                <form action="" id="login-form">
+                <h3 id="signInHeader">Login | Register</h3>
+                <form id="login-form">
                   <h3>Login Form</h3>
-                  <input type="text" placeholder="Username"><br>
-                  <input type="password" placeholder="Password"><br>
-                  <button onclick=""><a href="">Login</a></button><br>
-                  <p>Click here for <a href="">Register</a></p>
+                  <input type="email" placeholder="Email Id" id="s-signIn-email"><br>
+                  <input type="password" placeholder="Password" id="s-signIn-password"><br>
+                  <input type="submit" id="userSingInBtn" value="Login"><br>
+                  <p>Click here for <a href="signup-page.html">Register</a></p>
                 </form>
             </div>
             <a href="#">
@@ -453,6 +453,6 @@
     </footer>
 
 
-    <script src="./scripts/home-page.js"></script>
+    <script src="./scripts/home-page.js" type="module"></script>
 </body>
 </html>
