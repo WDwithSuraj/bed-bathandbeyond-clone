@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithRedirect, getRedirectResult, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 
 
@@ -24,6 +24,11 @@ let userEmail = document.getElementById('s-email');
 let singUpPageContinueBtn = document.getElementById('continue-btn');
 let continueWithGoogleBtn = document.querySelector('.s-continueWithGoogle')
 let continueWithAppleBtn = document.querySelector('.s-continueWithApple')
+let backButton = document.querySelector('.s-backButton');
+
+
+
+
 function ValidateEmail(mail) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
         return (true)
@@ -34,35 +39,18 @@ function ValidateEmail(mail) {
 
 singUpPageContinueBtn.addEventListener('click', () => {
     if (ValidateEmail(userEmail)) {
+
         localStorage.setItem('user-email', userEmail.value)
+        setTimeout(() => {
+            location.href = 'signup-detail.html'
+        }, 1000)
     }
-    setTimeout(() => {
-        location.href = 'signup-detail.html'
-    }, 1000)
+
 })
-
+backButton.addEventListener('click', () => {
+    location.href = "index.html"
+})
 continueWithGoogleBtn.addEventListener('click', () => {
-    // signInWithRedirect(auth, provider);
-    // getRedirectResult(auth)
-    //     .then((result) => {
-    //         // This gives you a Google Access Token. You can use it to access Google APIs.
-    //         const credential = GoogleAuthProvider.credentialFromResult(result);
-    //         const token = credential.accessToken;
-
-    //         // The signed-in user info.
-    //         const user = result.user;
-    //         // IdP data available using getAdditionalUserInfo(result)
-    //         // ...
-    //     }).catch((error) => {
-    //         // Handle Errors here.
-    //         const errorCode = error.code;
-    //         const errorMessage = error.message;
-    //         // The email of the user's account used.
-    //         const email = error.customData.email;
-    //         // The AuthCredential type that was used.
-    //         const credential = GoogleAuthProvider.credentialFromError(error);
-    //         // ...
-    //     });
     signInWithPopup(auth, provider)
         .then((result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
