@@ -1,458 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- setting google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/home-page.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- setting google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/home-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./favicon/android-chrome-512x512.png" type="image/x-icon">
-    <title>Home Page | Bath Kit</title>
+  <link rel="shortcut icon" href="./favicon/android-chrome-512x512.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Home Page | Bath Kit</title>
 </head>
+
 <body>
-    <header>
-        <!-- ///////// Header///////// -->
-        <div class="j-header-container">
-            <div id="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div id="main-logo">
-                <a href="./index.html"><img src="./logo/Bath Kit logo.jpg" alt="error"></a>
-            </div>
-            <div id="search-bar">
-                <div>
-                    <input type="text" placeholder="What product we can help you find?" class="search">
-                </div>
-                <div><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-            </div>
-            <div id="user-account">
-                <i class="fa-regular fa-user"></i>
-                <h3 id="signInHeader">Login | Register</h3>
-                <form id="login-form">
-                  <h3>Login Form</h3>
-                  <input type="email" placeholder="Email Id" id="s-signIn-email"><br>
-                  <input type="password" placeholder="Password" id="s-signIn-password"><br>
-                  <input type="submit" id="userSingInBtn" value="Login"><br>
-                  <p>Click here for <a href="signup-page.html">Register</a></p>
-                </form>
-            </div>
-            <a href="#">
-                <div id="order">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <h3>Cart</h3>
-                </div>
-            </a>
-        </div>
-        <!-- ////////// Nav Bar /////////// -->
-        <nav>
-            <ul>
-              <li>
-                Bedding
-                <div class="subMenu">
-                  <div id="womenEthic" class="submenuList">
-                    <div class="column">
-                      <h4>Bedding</h4>
-                      <p><a href="./viewall.html">Comforter sets</a></p>
-                      <p><a href="./viewall.html">Bed in a bag</a></p>
-                      <p><a href="./viewall.html">Duvet covers</a></p>
-                      <p><a href="./viewall.html">Quilts</a></p>
-                      <p><a href="./viewall.html">Kids bedding</a></p>
-                    </div>
-                    <div class="column">
-                      <h4>Bedding basics</h4>
-                      <p><a href="./viewall.html"> Mattress pads </a></p>
-                      <p><a href="./viewall.html"> Mattress toppers </a></p>
-                      <p><a href="./viewall.html"> Mattress protectors </a></p>
-                      <p><a href="./viewall.html"> Pillow protectors </a></p>
-                      <p><a href="./viewall.html"> Down & down alternative </a></p>
-                    </div>
-                    <div class="column">
-                      <h4>Bedding accessories</h4>
-                      <p>Shams</p>
-                      <p>Bed skirts</p>
-                      <p>Canopies</p>
-                      <p>Air mattresses</p>
-                    </div>
-                    <div class="column">
-                      <h4>Sheets & Pillowcases</h4>
-                      <p>Sheet sets</p>
-                      <p>Flannel sheets</p>
-                      <p>Fitted Sheets</p>
-                      <p>Flat sheets</p>
-                      <p>Pillowcases</p>
-                    </div>
-                    <div class="column">
-                      <h4>Pillows</h4>
-                      <p>Bed pillows</p>
-                      <p>Throw pillow</p>
-                      <p>Support pillows</p>
-                    </div>
-                    <div class="column">
-                      <h4>Blankets</h4>
-                      <p>Bed blankets</p>
-                      <p>Throw blankets</p>
-                      <p>Weightes blankets</p>
-                      <p>Electric blankets</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Bath
-                <div class="subMenu">
-                  <div id="womenWestern" class="submenuList">
-                    <div class="column">
-                      <h4>Bath linens</h4>
-                      <p><a href="./viewall.html"> Bath towels </a></p>
-                      <p><a href="./viewall.html"> Bath towel sets</a></p>
-                      <p><a href="./viewall.html"> Bath rugs</a></p>
-                      <p><a href="./viewall.html"> Bath rug sets</a></p>
-                    </div>
-                    <div class="column">
-                      <h4>Shower</h4>
-                      <p>Shower Curtains</p>
-                      <p>Shower liners</p>
-                      <p>Shower & tub mats</p>
-                      <p>Shower hooks & rods</p>
-                      <p>Shower heads</p>
-                    </div>
-                    <div class="column">
-                      <h4>Bath accessories</h4>
-                      <p>Bathroom accessory sets</p>
-                      <p>Soap & lotion dispensers</p>
-                      <p>Wastebaskets</p>
-                      <p>Toothbrush holders</p>
-                      <p>Toilet seats & accessories</p>
-                    </div>
-                    <div class="column">
-                      <h4>Bath hardware</h4>
-                      <p>Towel bars</p>
-                      <p>Towel rings</p>
-                      <p>Toilet paper holders</p>
-                      <p> Towel warmers</p>
-                      <p>Robe &towel hooks</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Kitchen
-                <div class="subMenu">
-                  <div id="men" class="submenuList">
-                    <div class="column">
-                      <h4>Small appliances</h4>
-                      <p>Air fryers</p>
-                      <p>Blenders</p>
-                      <p>Food precessors</p>
-                      <p>Ice cream makers</p>
-                      <p>Juicers</p>
-                      <p>Mixers & attachments</p>
-                      <p>Toasters & ovens</p>
-                    </div>
-                    <div class="column">
-                      <h4>Cookware</h4>
-                      <p>Cookware sets</p>
-                      <p>Dutch ovens</p>
-                      <p>Frying pans</p>
-                      <p>Pressure cookers</p>
-                      <p>Roasters</p>
-                      <p>Saucepens</p>
-                    </div>
-                    <div class="column">
-                      <h4>Kitchen gadgets</h4>
-                      <p>Cooling utensils</p>
-                      <p>Fruit & vegetable tools</p>
-                      <p>Measuring tools</p>
-                      <p>Mixing bowls</p>
-                      <p>Specialized tools</p>
-                    </div>
-                    <div class="column">
-                      <h4>Coffee & tea</h4>
-                      <p>Coffee</p>
-                      <p>Coffee makers</p>
-                      <p>Espresso machines</p>
-                      <p>Single serve coffee makers</p>
-                    </div>
-                    <div class="column">
-                      <h4>Cutlery & knives</h4>
-                      <p>Cutting boards</p>
-                      <p>Knife sets</p>
-                      <p>Steak knives</p>
-                    </div>
-                    <div class="column">
-                      <h4>Kitchen organization</h4>
-                      <p>Cabinet organization</p>
-                      <p>Counter organizers</p>
-                      <p>Drawer organizers</p>
-                      <p>Pantry organizers</p>
-                      <p>Sink organization</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Dining
-                <div class="subMenu">
-                  <div id="kids" class="submenuList">
-                    <div class="column">
-                      <h4>Diningware</h4>
-                      <p>Diningware sets</p>
-                      <p>Diningware collection</p>
-                    </div>
-                    <div class="column">
-                      <h4>Drinkware</h4>
-                      <p>Drinking glasses</p>
-                      <p>Coffee mugs</p>
-                      <p>Wine glasses</p>
-                      <p>Beer glasses</p>
-                      <p>Cocktail glasses</p>
-                      <p>Champagne glasses</p>
-                    </div>
-                    <div class="column">
-                      <h4>Flatware</h4>
-                      <p>Flatware sets</p>
-                      <p>Place settings</p>
-                      <p>Serving sets</p>
-                      <p>Open stock flatware</p>
-                    </div>
-                    <div class="column">
-                      <h4>Table linens</h4>
-                      <p>Tablecloths</p>
-                      <p>Table runners</p>
-                      <p>Placemats</p>
-                      <p>Napkins</p>
-                      <p>Napkin rings</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Storage & cleaning
-                <div class="subMenu">
-                  <div id="HomeAndKitchen" class="submenuList">
-                    <div class="column">
-                      <h4>Storage solutions</h4>
-                      <p>Storage bins & baskets</p>
-                      <p>Drawers & carts</p>
-                      <p>Storage units</p>
-                      <p>Shelving</p>
-                      <p>Storage bags</p>
-                    </div>
-                    <div class="column">
-                      <h4>Closet storage</h4>
-                      <p>Shoe racks</p>
-                      <p>Clothing storage</p>
-                      <p>Hangers</p>
-                      <p>Hooks</p>
-                    </div>
-                    <div class="column">
-                      <h4>Kitchen storage</h4>
-                      <p>Food storage</p>
-                      <p>Sink organization</p>
-                      <p>Cabinet organizers</p>
-                      <p>Counter organizers</p>
-                      <p>Drawer organizers</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Home decor
-                <div class="subMenu">
-                  <div id="beautyAndHealth" class="submenuList">
-                    <div class="column">
-                      <h4>Rugs</h4>
-                      <p>Area rugs</p>
-                      <p>Throw rugs</p>
-                      <p>Rug pads</p>
-                      <p>Kitchen rugs</p>
-                      <p>Doormats</p>
-                      <p>Outdoor rugs</p>
-                    </div>
-                    <div class="column">
-                      <h4>Frames & albums</h4>
-                      <p>Wall frames</p>
-                      <p>Tabletop frames</p>
-                      <p>Collage frames</p>
-                    </div>
-                    <div class="column">
-                      <h4>Candles & fragrance</h4>
-                      <p>Candles</p>
-                      <p>Flameless candles</p>
-                      <p>Home fragrance</p>
-                      <p>Candle holders</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Curtain & windows
-                <div class="subMenu">
-                  <div id="JewelleryAndAccessories" class="submenuList">
-                    <div class="column">
-                      <h4>Curtain panels</h4>
-                      <p>Flatware sets</p>
-                      <p>Place settings</p>
-                      <p>Serving sets</p>
-                      <p>Open stock flatware</p>
-                    </div>
-                    <div class="column">
-                      <h4>Window shades</h4>
-                      <p>Cooling utensils</p>
-                      <p>Fruit & vegetable tools</p>
-                      <p>Measuring tools</p>
-                      <p>Mixing bowls</p>
-                      <p>Specialized tools</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Furniture
-                <div class="subMenu">
-                  <div id="BagsFootWarId" class="submenuList">
-                    <div class="column">
-                      <h4>Living room</h4>
-                      <p>Sheet sets</p>
-                      <p>Flannel sheets</p>
-                      <p>Fitted Sheets</p>
-                      <p>Flat sheets</p>
-                      <p>Pillowcases</p>
-                    </div>
-                    <div class="column">
-                      <h4>Kitchen & dining</h4>
-                      <p>Cooling utensils</p>
-                      <p>Fruit & vegetable tools</p>
-                      <p>Measuring tools</p>
-                      <p>Mixing bowls</p>
-                      <p>Specialized tools</p>
-                    </div>
-                    <div class="column">
-                      <h4>Bedroom</h4>
-                      <h4>Bath hardware</h4>
-                      <p>Towel bars</p>
-                      <p>Towel rings</p>
-                      <p>Toilet paper holders</p>
-                      <p> Towel warmers</p>
-                      <p>Robe &towel hooks</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Health & beauty
-                <div class="subMenu">
-                  <div id="ElectronicsId" class="submenuList">
-                    <div class="column">
-                      <h4>Hair care</h4>
-                      <p>Hair diyers</p>
-                      <p>Shampoo</p>
-                      <p>Conditioners</p>
-                      <p>Hair brushes</p>
-                    </div>
-                    <div class="column">
-                      <h4>Appliances</h4>
-                      <p>All Appliances</p>
-                      <p>Grooming</p>
-                      <p>Home Appliances</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </nav>
-    </header>
-    <div id="main-body">
-        <div id="banner">
-          <img src="https://b3h2.scene7.com/is/content/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C01-19-DSK-1?$content$&wid=2560&hei=1000" alt="">
-          <a href=""><button>shop now</button></a>
-        </div>
-        <div id="img-card">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-1?$content$" alt="">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-10?$content$" alt="">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-3?$content$" alt="">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-4?$content$" alt="">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-5?$content$" alt="">
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-6?$content$" alt="">
-        </div>
+  <header>
+    <!-- ///////// Header///////// -->
+    <div class="j-header-container">
+      <div id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div id="main-logo">
+        <a href="./index.html"><img src="./logo/Bath Kit logo.jpg" alt="error"></a>
+      </div>
+      <div id="search-bar">
         <div>
-          <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C01-19-DSK-2?$content$&wid=1280&hei=350" alt="">
+          <input type="text" placeholder="What product we can help you find?" class="search">
         </div>
-        <div id="img-card2">
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-1?$content$" alt="">
-            <p>Patio furniture</p>
-          </div>
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-2?$content$" alt="">
-            <p>Patio umbrellas</p>
-          </div>
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-3?$content$" alt="">
-            <p>Outdoor entertaining</p>
-          </div>
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-4?$content$" alt="">
-            <p>Lawn & gardening</p>
-          </div>
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-5?$content$" alt="">
-            <p>Fire pits & outdoor heating</p>
-          </div>
-          <div>
-            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-3-3?$content$" alt="">
-            <p>Outdoor pillows</p>
-          </div>
+        <div><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></div>
+      </div>
+      <div id="user-account">
+        <i class="fa-regular fa-user"></i>
+        <h3 id="signInHeader">Login | Register</h3>
+        <form id="login-form">
+          <h3>Login Form</h3>
+          <input type="email" placeholder="Email Id" id="s-signIn-email"><br>
+          <input type="password" placeholder="Password" id="s-signIn-password"><br>
+          <input type="submit" id="userSingInBtn" value="Login"><br>
+          <p>Click here for <a href="signup-page.html">Register</a></p>
+        </form>
+      </div>
+      <a href="#">
+        <div id="order">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Cart</h3>
         </div>
+      </a>
+    </div>
+    <!-- ////////// Nav Bar /////////// -->
+    <nav>
+      <ul>
+        <li>
+          Bedding
+          <div class="subMenu">
+            <div id="womenEthic" class="submenuList">
+              <div class="column">
+                <h4>Bedding</h4>
+                <p><a href="./viewall.html">Comforter sets</a></p>
+                <p><a href="./viewall.html">Bed in a bag</a></p>
+                <p><a href="./viewall.html">Duvet covers</a></p>
+                <p><a href="./viewall.html">Quilts</a></p>
+                <p><a href="./viewall.html">Kids bedding</a></p>
+              </div>
+              <div class="column">
+                <h4>Bedding basics</h4>
+                <p><a href="./viewall.html"> Mattress pads </a></p>
+                <p><a href="./viewall.html"> Mattress toppers </a></p>
+                <p><a href="./viewall.html"> Mattress protectors </a></p>
+                <p><a href="./viewall.html"> Pillow protectors </a></p>
+                <p><a href="./viewall.html"> Down & down alternative </a></p>
+              </div>
+              <div class="column">
+                <h4>Bedding accessories</h4>
+                <p>Shams</p>
+                <p>Bed skirts</p>
+                <p>Canopies</p>
+                <p>Air mattresses</p>
+              </div>
+              <div class="column">
+                <h4>Sheets & Pillowcases</h4>
+                <p>Sheet sets</p>
+                <p>Flannel sheets</p>
+                <p>Fitted Sheets</p>
+                <p>Flat sheets</p>
+                <p>Pillowcases</p>
+              </div>
+              <div class="column">
+                <h4>Pillows</h4>
+                <p>Bed pillows</p>
+                <p>Throw pillow</p>
+                <p>Support pillows</p>
+              </div>
+              <div class="column">
+                <h4>Blankets</h4>
+                <p>Bed blankets</p>
+                <p>Throw blankets</p>
+                <p>Weightes blankets</p>
+                <p>Electric blankets</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Bath
+          <div class="subMenu">
+            <div id="womenWestern" class="submenuList">
+              <div class="column">
+                <h4>Bath linens</h4>
+                <p><a href="./viewall.html"> Bath towels </a></p>
+                <p><a href="./viewall.html"> Bath towel sets</a></p>
+                <p><a href="./viewall.html"> Bath rugs</a></p>
+                <p><a href="./viewall.html"> Bath rug sets</a></p>
+              </div>
+              <div class="column">
+                <h4>Shower</h4>
+                <p>Shower Curtains</p>
+                <p>Shower liners</p>
+                <p>Shower & tub mats</p>
+                <p>Shower hooks & rods</p>
+                <p>Shower heads</p>
+              </div>
+              <div class="column">
+                <h4>Bath accessories</h4>
+                <p>Bathroom accessory sets</p>
+                <p>Soap & lotion dispensers</p>
+                <p>Wastebaskets</p>
+                <p>Toothbrush holders</p>
+                <p>Toilet seats & accessories</p>
+              </div>
+              <div class="column">
+                <h4>Bath hardware</h4>
+                <p>Towel bars</p>
+                <p>Towel rings</p>
+                <p>Toilet paper holders</p>
+                <p> Towel warmers</p>
+                <p>Robe &towel hooks</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Kitchen
+          <div class="subMenu">
+            <div id="men" class="submenuList">
+              <div class="column">
+                <h4>Small appliances</h4>
+                <p>Air fryers</p>
+                <p>Blenders</p>
+                <p>Food precessors</p>
+                <p>Ice cream makers</p>
+                <p>Juicers</p>
+                <p>Mixers & attachments</p>
+                <p>Toasters & ovens</p>
+              </div>
+              <div class="column">
+                <h4>Cookware</h4>
+                <p>Cookware sets</p>
+                <p>Dutch ovens</p>
+                <p>Frying pans</p>
+                <p>Pressure cookers</p>
+                <p>Roasters</p>
+                <p>Saucepens</p>
+              </div>
+              <div class="column">
+                <h4>Kitchen gadgets</h4>
+                <p>Cooling utensils</p>
+                <p>Fruit & vegetable tools</p>
+                <p>Measuring tools</p>
+                <p>Mixing bowls</p>
+                <p>Specialized tools</p>
+              </div>
+              <div class="column">
+                <h4>Coffee & tea</h4>
+                <p>Coffee</p>
+                <p>Coffee makers</p>
+                <p>Espresso machines</p>
+                <p>Single serve coffee makers</p>
+              </div>
+              <div class="column">
+                <h4>Cutlery & knives</h4>
+                <p>Cutting boards</p>
+                <p>Knife sets</p>
+                <p>Steak knives</p>
+              </div>
+              <div class="column">
+                <h4>Kitchen organization</h4>
+                <p>Cabinet organization</p>
+                <p>Counter organizers</p>
+                <p>Drawer organizers</p>
+                <p>Pantry organizers</p>
+                <p>Sink organization</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Dining
+          <div class="subMenu">
+            <div id="kids" class="submenuList">
+              <div class="column">
+                <h4>Diningware</h4>
+                <p>Diningware sets</p>
+                <p>Diningware collection</p>
+              </div>
+              <div class="column">
+                <h4>Drinkware</h4>
+                <p>Drinking glasses</p>
+                <p>Coffee mugs</p>
+                <p>Wine glasses</p>
+                <p>Beer glasses</p>
+                <p>Cocktail glasses</p>
+                <p>Champagne glasses</p>
+              </div>
+              <div class="column">
+                <h4>Flatware</h4>
+                <p>Flatware sets</p>
+                <p>Place settings</p>
+                <p>Serving sets</p>
+                <p>Open stock flatware</p>
+              </div>
+              <div class="column">
+                <h4>Table linens</h4>
+                <p>Tablecloths</p>
+                <p>Table runners</p>
+                <p>Placemats</p>
+                <p>Napkins</p>
+                <p>Napkin rings</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Storage & cleaning
+          <div class="subMenu">
+            <div id="HomeAndKitchen" class="submenuList">
+              <div class="column">
+                <h4>Storage solutions</h4>
+                <p>Storage bins & baskets</p>
+                <p>Drawers & carts</p>
+                <p>Storage units</p>
+                <p>Shelving</p>
+                <p>Storage bags</p>
+              </div>
+              <div class="column">
+                <h4>Closet storage</h4>
+                <p>Shoe racks</p>
+                <p>Clothing storage</p>
+                <p>Hangers</p>
+                <p>Hooks</p>
+              </div>
+              <div class="column">
+                <h4>Kitchen storage</h4>
+                <p>Food storage</p>
+                <p>Sink organization</p>
+                <p>Cabinet organizers</p>
+                <p>Counter organizers</p>
+                <p>Drawer organizers</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Home decor
+          <div class="subMenu">
+            <div id="beautyAndHealth" class="submenuList">
+              <div class="column">
+                <h4>Rugs</h4>
+                <p>Area rugs</p>
+                <p>Throw rugs</p>
+                <p>Rug pads</p>
+                <p>Kitchen rugs</p>
+                <p>Doormats</p>
+                <p>Outdoor rugs</p>
+              </div>
+              <div class="column">
+                <h4>Frames & albums</h4>
+                <p>Wall frames</p>
+                <p>Tabletop frames</p>
+                <p>Collage frames</p>
+              </div>
+              <div class="column">
+                <h4>Candles & fragrance</h4>
+                <p>Candles</p>
+                <p>Flameless candles</p>
+                <p>Home fragrance</p>
+                <p>Candle holders</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Curtain & windows
+          <div class="subMenu">
+            <div id="JewelleryAndAccessories" class="submenuList">
+              <div class="column">
+                <h4>Curtain panels</h4>
+                <p>Flatware sets</p>
+                <p>Place settings</p>
+                <p>Serving sets</p>
+                <p>Open stock flatware</p>
+              </div>
+              <div class="column">
+                <h4>Window shades</h4>
+                <p>Cooling utensils</p>
+                <p>Fruit & vegetable tools</p>
+                <p>Measuring tools</p>
+                <p>Mixing bowls</p>
+                <p>Specialized tools</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Furniture
+          <div class="subMenu">
+            <div id="BagsFootWarId" class="submenuList">
+              <div class="column">
+                <h4>Living room</h4>
+                <p>Sheet sets</p>
+                <p>Flannel sheets</p>
+                <p>Fitted Sheets</p>
+                <p>Flat sheets</p>
+                <p>Pillowcases</p>
+              </div>
+              <div class="column">
+                <h4>Kitchen & dining</h4>
+                <p>Cooling utensils</p>
+                <p>Fruit & vegetable tools</p>
+                <p>Measuring tools</p>
+                <p>Mixing bowls</p>
+                <p>Specialized tools</p>
+              </div>
+              <div class="column">
+                <h4>Bedroom</h4>
+                <h4>Bath hardware</h4>
+                <p>Towel bars</p>
+                <p>Towel rings</p>
+                <p>Toilet paper holders</p>
+                <p> Towel warmers</p>
+                <p>Robe &towel hooks</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          Health & beauty
+          <div class="subMenu">
+            <div id="ElectronicsId" class="submenuList">
+              <div class="column">
+                <h4>Hair care</h4>
+                <p>Hair diyers</p>
+                <p>Shampoo</p>
+                <p>Conditioners</p>
+                <p>Hair brushes</p>
+              </div>
+              <div class="column">
+                <h4>Appliances</h4>
+                <p>All Appliances</p>
+                <p>Grooming</p>
+                <p>Home Appliances</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="main-body">
+    <div id="banner">
+      <img
+        src="https://b3h2.scene7.com/is/content/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C01-19-DSK-1?$content$&wid=2560&hei=1000"
+        alt="">
+    </div>
+    <div id="img-card">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-1?$content$" alt="">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-10?$content$" alt="">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-3?$content$" alt="">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-4?$content$" alt="">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-5?$content$" alt="">
+      <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-1-6?$content$" alt="">
+    </div>
+    <div>
+      <img
+        src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C01-19-DSK-2?$content$&wid=1280&hei=350"
+        alt="">
+    </div>
+    <div id="img-card2">
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-1?$content$"
+          alt="">
+        <p>Patio furniture</p>
+      </div>
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-2?$content$"
+          alt="">
+        <p>Patio umbrellas</p>
+      </div>
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-3?$content$"
+          alt="">
+        <p>Outdoor entertaining</p>
+      </div>
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-4?$content$"
+          alt="">
+        <p>Lawn & gardening</p>
+      </div>
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-2-5?$content$"
+          alt="">
+        <p>Fire pits & outdoor heating</p>
+      </div>
+      <div>
+        <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/FY22-FW52-US-0219-WEB-HP-C02-5-3-3?$content$"
+          alt="">
+        <p>Outdoor pillows</p>
+      </div>
     </div>
 
-    <footer id="bottom">
-      <div id="btm-data">
-          <div>
-              <h3>CUSTOMER SUPPORT</h3>
-              <p>Accessibility Statement</p>
-              <p>Contact Us</p>
-              <p>Forgot Password</p>
-              <p>Help Desk</p>
-              <p>In Store Pickup</p>
-              <p>In Store Services</p>
-              <p>Order Tracking</p>
-              <p>Recall Information</p>
-              <p>Return Policy</p>
-              <p>Same Day Delivery</p>
+    <div id="j-product-slider">
+      <!-- <div class="j-product-card">
+            <div>
+              <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-07-19-11-29_3_ugg_coco_ashfg_blanket_webshot2?$713$&wid=713&hei=713" alt="">
+              <h4>$59.99 - $79.99</h4>
+              <p>UGG Coco Blanket</p>
+            </div>
+            <div>
+              <p>&#9733 &#9733 &#9733 &#9733 &#9733</p>
+              <p>108</p>
+            </div>
+          </div> -->
+
+      <h2 class="product-category">best selling</h2>
+      <button class="pre-btn"><img src="icons/arrow.png" alt=""></button>
+      <button class="nxt-btn"><img src="icons/arrow.png" alt=""></button>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-07-19-11-29_3_ugg_coco_ashfg_blanket_webshot2?$713$&wid=713&hei=713"
+              class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
           </div>
-          <div>
-              <h3>ABOUT US</h3>
-              <p>Affiliate Program</p>
-              <p>Career Opportunities</p>
-              <p>Corporation Information</p>
-              <p>Gift Cards</p>
-              <p>Investor Relation</p>
-              <p>2020 Annual Reoprt</p>
-              <p>Safety Data Sheets</p>
-              <p>Press</p>
-              <p>Store Locator</p>
+          <div class="product-info">
+            <span class="price">$59.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Coco Blanket</p>
           </div>
-          <div>
-              <h3>PROFESSIONAL SHOPS</h3>
-              <p>MyAdvance</p>
-              <p>Online Parts Ordering</p>
-              <p>TechNet Professional</p>
-              <p>Technical Training</p>
-              <p>Interactive Vehicle Animation</p>
-              <p>Parts & Products</p>
-              <p>Promotion & Rewards</p>
-              <p>Shop Solutions</p>
-              <p>Find My Mechanic</p>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-05-19-11-50_2_ugg_coco_snw_qlt_webshot_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
           </div>
+          <div class="product-info">
+            <span class="price">$159.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Coco3-Piece Quilt Set</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-07-19-15-44_1_ugg_classicserpa_thrw_ldgemlnge_web1_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$49.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Shepra Blanket</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-08-10-14-17_coco_navy_pillow_sil_lowres_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$39.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Coco Luxe Square</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_36561945404112g_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$79.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Avalon Blanket</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/81806610426_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$50.00</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">Nestwell Cotton Comfort Mattress</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-07-20-16-54_1_ugg_shopbddng_cllctna_multi_web9?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$41.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Flannel Sheet Set</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2022-03-02-10-36_2_ugg_crew_otmlhthr_qlt_pri_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$99.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Crew 3-Piece Jersey Blanket</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/lf_35876385467783m_imageset?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$79.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Devon Down Blanket</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/2020-12-21-10-34_ugg_dawn_quiltset_snow_threequarter?$713$&wid=713&hei=713" class="product-thumb" alt="">
+            <button class="card-btn">add to wishlist</button>
+          </div>
+          <div class="product-info">
+            <span class="price">$49.99</span><span class="actual-price">&#9733 &#9733 &#9733 &#9733 <span>&#9733</span></span>
+            <p class="product-short-description">UGG Clifton Backrest Pillow</p>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+
+  <footer id="bottom">
+    <div id="btm-data">
+      <div>
+        <h3>CUSTOMER SUPPORT</h3>
+        <p>Accessibility Statement</p>
+        <p>Contact Us</p>
+        <p>Forgot Password</p>
+        <p>Help Desk</p>
+        <p>In Store Pickup</p>
+        <p>In Store Services</p>
+        <p>Order Tracking</p>
+        <p>Recall Information</p>
+        <p>Return Policy</p>
+        <p>Same Day Delivery</p>
+      </div>
+      <div>
+        <h3>ABOUT US</h3>
+        <p>Affiliate Program</p>
+        <p>Career Opportunities</p>
+        <p>Corporation Information</p>
+        <p>Gift Cards</p>
+        <p>Investor Relation</p>
+        <p>2020 Annual Reoprt</p>
+        <p>Safety Data Sheets</p>
+        <p>Press</p>
+        <p>Store Locator</p>
+      </div>
+      <div>
+        <h3>PROFESSIONAL SHOPS</h3>
+        <p>MyAdvance</p>
+        <p>Online Parts Ordering</p>
+        <p>TechNet Professional</p>
+        <p>Technical Training</p>
+        <p>Interactive Vehicle Animation</p>
+        <p>Parts & Products</p>
+        <p>Promotion & Rewards</p>
+        <p>Shop Solutions</p>
+        <p>Find My Mechanic</p>
+      </div>
+    </div>
+  </footer>
 
 
-    <script src="./scripts/home-page.js" type="module"></script>
+  <script src="./scripts/home-page.js" type="module"></script>
 </body>
+
 </html>

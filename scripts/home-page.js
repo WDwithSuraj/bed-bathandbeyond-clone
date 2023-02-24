@@ -32,7 +32,6 @@ function getUserData(userId) {
             let userDetails = snapshot.val()
             console.log(userDetails)
             localStorage.setItem('userDetails', JSON.stringify(userDetails));
-            localStorage.setItem("login", 'true')
         } else {
             console.log("No data available");
         }
@@ -69,23 +68,25 @@ userSignInBtn.addEventListener('submit', (e) => {
             // ...
             if (user.accessToken) {
                 getUserData(user.uid)
-
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1500)
             }
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    // User is signed in, see docs for a list of available properties
-                    // https://firebase.google.com/docs/reference/js/firebase.User
-                    const uid = user.uid;
-                    // alert('User has been signed in')
+            // onAuthStateChanged(auth, (user) => {
+            //     if (user) {
+            //         // User is signed in, see docs for a list of available properties
+            //         // https://firebase.google.com/docs/reference/js/firebase.User
+            //         const uid = user.uid;
+            //         // alert('User has been signed in')
 
 
-                    // ...
-                } else {
-                    // User is signed out
-                    // ...
-                    console.log('User is signed OUt')
-                }
-            });
+            //         // ...
+            //     } else {
+            //         // User is signed out
+            //         // ...
+            //         console.log('User is signed OUt')
+            //     }
+            // });
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -98,26 +99,67 @@ userSignInBtn.addEventListener('submit', (e) => {
 })
 
 
-// if (userDetails) {
-//     changeLoginText.innerText = "My Account"
-//     userDataText.innerHTML = null;
-//     let userName = document.createElement('h3')
-//     userName.innerText = `hii ${userDetails.firstName}`
-//     let userPra = document.createElement('p')
-//     userPra.innerText = `Welcome ${userDetails.firstName} ${userDetails.lastName} to Bath Kit.
-//     Here we insure Customer happiness by providing 100% quality products.`
-//     let userLogOutBtn = document.createElement('button')
-//     userLogOutBtn.setAttribute('id', 'userLogBtn')
-//     userLogOutBtn.innerText = "Log Out"
-//     // userLogOutBtn.addEventListener('click', () => {
-//     //     UserLogin = false;
-//     // })
+if (userDetails) {
+    changeLoginText.innerText = "My Account"
+    userDataText.innerHTML = null;
+    let userName = document.createElement('h3')
+    userName.classList.add('userHeading')
+    userName.innerText = `Hii ${userDetails.firstName}`
+    let userPra = document.createElement('p')
+    userPra.innerText = `Welcome ${userDetails.firstName}  to Bath Kit.
+    Here we insure Customer happiness by providing 100% quality products.`
 
-//     userDataText.append(userName, userPra, userLogOutBtn)
-// }
+    let userLogOutBtn = document.createElement('button')
+    userLogOutBtn.setAttribute('id', 'userLogBtn')
+    userLogOutBtn.innerText = "Log Out"
+    userLogOutBtn.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't to Log Out",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Log Out!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Log Out!',
+                    'You have been logged out!.',
+                    'success'
+                )
+                localStorage.removeItem('userDetails')
+                setTimeout(() => {
+                    location.href = 'index.html'
+                    localStorage.removeItem('userDetails');
+
+                }, 1000)
+            }
+        })
+
+    })
+
+    userDataText.append(userName, userPra, userLogOutBtn)
+}
 // else if (userDetails == undefined) {
-//     if (UserLogin == false) {
-//         localStorage.removeItem('userDetails')
-//     }
+//    location.href = ''
 // }
 
+
+
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
