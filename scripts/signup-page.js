@@ -61,6 +61,23 @@ continueWithGoogleBtn.addEventListener('click', () => {
             // IdP data available using getAdditionalUserInfo(result)
             // ...
             console.log(user)
+            if (user.accessToken) {
+                let userObj = {
+                    firstName: user.displayName,
+                    email: user.email
+                }
+                localStorage.setItem('userDetails', JSON.stringify(userObj))
+                Swal.fire(
+                    'congratulation',
+                    'Your account has been created',
+                    'success',
+                )
+                setTimeout(() => {
+                    location.href = "index.html"
+                }, 3000)
+            }
+
+
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
