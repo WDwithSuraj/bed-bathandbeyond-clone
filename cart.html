@@ -16,122 +16,7 @@
     <link rel="stylesheet" href="responsive.css">
     <script src="https://kit.fontawesome.com/b06a377e67.js" crossorigin="anonymous"></script>
 </head>
-<style>
-    .cartcont {
-        margin: 50px auto;
-        width: 80%;
-    }
 
-    .cartcont>div {
-        display: flex;
-        margin: 20px auto;
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    }
-
-    .cartcont>div>div:nth-child(1) {
-        width: 40%;
-        height: 350px;
-        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    }
-
-    .cartcont>div>div:nth-child(1)>img {
-        width: 100%;
-        height: 350px;
-    }
-
-    .cartcont>div>div:nth-child(1)>img:hover {
-        cursor: zoom-in;
-    }
-
-    .cartcont>div>div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 30px;
-    }
-
-    .cartcont>div>div:nth-child(2)>h2,
-    .cartcont>div>div:nth-child(2)>p {
-        margin-bottom: 0px;
-    }
-
-    .cartcont>div>div:nth-child(2)>p~h2 {
-        margin-bottom: 10px;
-    }
-
-    .cartcont>div>div:nth-child(2)>button {
-        width: 60%;
-        margin: 20px 0;
-        font-size: 16px;
-        padding: 8px;
-        color: white;
-        border: none;
-        background-color: rgb(24, 21, 22);
-    }
-
-    .cartcont>div>div:nth-child(2)>div {
-        width: 100px;
-        display: flex;
-        margin: 10px 0;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .cartcont>div>div:nth-child(2)>div>button {
-        font-size: 20px;
-        padding: 5px 10px 5px 10px;
-        color: white;
-        border: none;
-        background-color: rgb(24, 20, 22);
-    }
-
-    .carttotal {
-        /* margin: auto; */
-        margin-top: 80px;
-        /* padding-top: 200px; */
-        text-align: center;
-        padding: 5px 15px 5px 15px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        width: 40%;
-        background-color: rgb(49, 66, 188);
-        color: white;
-    }
-
-    .cart-empty {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-    .cart-empty img{
-        width: 80%;
-    }
-
-    .hide-div {
-        display: none;
-    }
-
-    .cartcont img {
-        object-fit: contain;
-    }
-    #cartnew{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-    #order{
-        margin: auto;
-        margin-top: 80px;
-        text-align: center;
-        padding: 5px 15px 5px 15px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        width: 40%;
-        /* background-color: rgb(49, 66, 188); */
-        color: white;
-    }
-    #coupons{
-
-    }
-</style>
 
 <body>
    
@@ -522,8 +407,99 @@
 </body>
 
 </html>
-<script src="/index.js"></script>
+
 <script>
 
-   
+    let cartData = JSON.parse(localStorage.getItem("cart"));
+    displayCart(cartData);
+    totalCost(cartData);
+
+    let cart_empty = document.querySelector(".cart-empty");
+    if (cartData.length != 0) {
+        cart_empty.classList.add("hide-div");
+    } else {
+        cart_empty.classList.remove("hide-div");
+    }
+
+    function displayCart(data) {
+        document.querySelector(".cartcont").innerHTML = "";
+        data.forEach((elem, index) => {
+            let maindiv = document.createElement("div");
+            let leftdiv = document.createElement("div");
+            let rightdiv = document.createElement("div");
+            let anc=document.createElement("a");
+           anc.href="./checkout.html";
+            let pic = document.createElement("img");
+            pic.setAttribute("src", elem.image);
+            let title = document.createElement("h2")
+            title.innerText = elem.title;
+            let cata = document.createElement("h2")
+            cata.innerText = elem.category;
+            let qty = document.createElement("p");
+            qty.innerText = "Qty: " + elem.id;
+            let rating = document.createElement("p");
+            rating.innerText = "Rating: " + elem.rating;
+            let price = document.createElement("h2");
+            price.innerText = "Rs: " + elem.price;
+
+            let calcdiv = document.createElement("div");
+            let plus = document.createElement("button");
+            plus.innerText = "+";
+            plus.addEventListener("click", function () {
+                span.innerText++;
+                totalCost(cartData);
+            })
+
+            let span = document.createElement("span");
+            span.setAttribute("class", "qty");
+            span.innerText = 1;
+
+            let minus = document.createElement("button");
+            minus.innerText = "-";
+            minus.addEventListener("click", function () {
+                if (span.innerText >= 1) {
+                    span.innerText--;
+                }
+                totalCost(cartData);
+            })
+
+            let del = document.createElement("button");
+            del.innerText = "REMOVE";
+            del.addEventListener("click", function () {
+                deleteData(cartData, index);
+            })
+            let buy = document.createElement("button");
+            buy.innerText = "BUY";
+
+
+            anc.append(buy)
+            calcdiv.append(minus, span, plus);
+            rightdiv.append(title,cata,price,rating, calcdiv, del,anc);
+            leftdiv.append(pic);
+            maindiv.append(leftdiv, rightdiv)
+            document.querySelector(".cartcont").append(maindiv);
+        })
+    }
+
+    function totalCost(arr) {
+        let qty = document.querySelectorAll(".qty");
+        let sum = 0;
+        for (let i = 0; i <= qty.length - 1; i++) {
+            if (arr.length == 0) {
+                sum = 0;
+            } else {
+                sum = sum + (Number(qty[i].innerText) * arr[i].price);
+            }
+        }
+
+        document.querySelector(".total").innerText = sum;
+    }
+
+    function deleteData(array, index) {
+        array.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(array));
+        displayCart(array);
+        totalCost(cartData);
+    }
+    
 </script>
