@@ -61,9 +61,9 @@ main{
     /* bottom: 0; */
     z-index: 1;
 }
-#btm-data{
+/* #btm-data{
     z-index: 20;
-}
+} */
 #Kpricefilter{
     font-size: 20px;
     margin-top: 20px;
