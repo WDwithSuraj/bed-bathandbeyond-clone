@@ -133,20 +133,22 @@ nav>img{
     background-color: rgba(0, 0, 0, 0);
 }
 #main-mid{
-    width: 54%;
+    width: 0%;
     height: 100%;
-    overflow: scroll;
+    padding-bottom: 50px;
+    /* overflow: scroll; */
     /* scrollbar-track-color: red; */
 }
 #main-right{
-    border-right: 1px solid rgb(255, 255, 255);
+    /* border-right: 1px solid rgb(255, 255, 255); */
     padding-left:20px;
     padding-right: 20px;
-    width: 40%;
+    width: 94%;
     height: 90%;
     color: white;
     margin: auto;
     text-align: center;
+    /* border: 1px solid red; */
 }
 #addForm{
     border: 1px solid rgb(255, 255, 255);
@@ -180,6 +182,9 @@ nav>img{
     padding-left: 20px;
     padding-right: 10px;
 }
+#addForm>input:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
 #addForm>input:nth-child(5){
     border:0px;
 }
@@ -190,10 +195,13 @@ nav>img{
     border-radius: 15px;
     padding-left: 15px;
     padding-top: 13px;
+    border: 1px solid white;
 }
 #addForm>h5{
     grid-area: OR;
     color: white;
+    text-align: start;
+    margin-left: 60px;
 }
 #inpID{
     grid-area: ID;
@@ -232,4 +240,349 @@ nav>img{
     width: 40%;
     margin-top: 40px;
     margin-left: 230px;
+    font-weight: 800;
+    font-size: 15px;
 }
+#addForm>input:last-child:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    cursor: pointer;
+}
+#updateForm{
+    border: 1px solid rgb(255, 255, 255);
+    height: 70%;
+    padding: 20px;
+    padding-top: 50px;
+    gap: 10px;
+    margin:40px auto;
+    display: grid;
+    width: 90%;
+    color: white;
+    grid-template-areas: 
+    "ID ID select select"
+    "imgURL imgURL imgURL imgURL"
+    "OR OR OR OR"
+    "imgFile imgFile size size"
+    "title title title title"
+    "price price color1 color1"
+    "submit submit sumbit sut"
+    ;
+    border-radius: 10px;
+}
+#updateForm>input:last-child{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#updateForm>input{
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#updateForm>input:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
+#updateForm>input:nth-child(5){
+    border:0px;
+}
+#uID{
+    grid-area: ID;
+    color: white;
+}
+#uTitle{
+    color: white;
+    grid-area: title;
+    height: 70px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-top: 13px;
+    border: 1px solid white;
+}
+#updateForm>h5{
+    grid-area: OR;
+    color: white;
+    text-align: start;
+    margin-left: 60px;
+}
+#updateForm{
+    grid-area: ID;
+    color: white;
+}
+#uSel{
+    color: white;
+    grid-area: select;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+#uImgURL{
+    color: white;
+    grid-area: imgURL;
+}
+#uImgFile{
+    grid-area: imgFile;
+}
+#uSize{
+    color: white;
+    grid-area: size;
+}
+#uPrice{
+    color: white;
+    grid-area: price;
+}
+#uColor{
+    color: white;
+    grid-area: color1;
+}
+#Update{
+    color: white;
+    grid-area: submit;
+    width: 40%;
+    margin-top: 40px;
+    margin-left: 230px;
+    font-weight: 800;
+    font-size: 15px;
+}
+#updateForm>input:last-child:hover{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    cursor: pointer;
+}
+#cardList{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 2px;
+}
+.card{
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.296) 0px 1px 3px 0px, rgba(255, 255, 255, 0.559) 0px 0px 0px 1px;
+    height: 450px;
+    text-align: start;
+}
+.delImg>img{
+    width: 100%;
+    height: 300px;
+    /* height: 10%; */
+}
+
+.card>div:nth-child(2){
+    padding: 10px;
+}
+.card>div:nth-child(2)>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card>div:nth-child(2)>div>div>button{
+    color: white;
+    background-color: red;
+    height: 30px;
+    width: 75px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    
+}
+.card>div:nth-child(2)>div>div>button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    border: 1px solid red;
+}
+#addList{
+    color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 2px;
+}
+
+.addCard>div:nth-child(2){
+    padding: 10px;
+    line-height: 18px;
+}
+.addCard>div:nth-child(2)>p{
+    font-size: 10px;
+}
+.addCard{
+    /* border: 1px solid white; */
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.296) 0px 1px 3px 0px, rgba(255, 255, 255, 0.559) 0px 0px 0px 1px;
+}
+.addImg>img{
+    width: 100%;
+    height: 300px;
+}
+#uList{
+    color: white;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 2px;
+}
+
+.uCard>div:nth-child(2){
+    padding: 10px;
+    line-height: 18px;
+}
+.uCard>div:nth-child(2)>div{
+    display: flex;
+    justify-content: space-between;
+}
+.uCard>div:nth-child(2)>div>div>span{
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.uCard>div:nth-child(2)>div>div>span:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+.uCard{
+    /* border: 1px solid white; */
+    height: 460px;
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.296) 0px 1px 3px 0px, rgba(255, 255, 255, 0.559) 0px 0px 0px 1px;
+}
+.uImg>img{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+#main-right::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #02020201;
+}
+
+#main-right::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #00000000;
+}
+
+#main-right::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background: linear-gradient(180deg, rgba(18,130,59,0) 0%, rgba(255,0,0,0.4823179271708683) 12%, rgba(255,0,0,0.829656862745098) 35%, rgba(255,0,0,0.8716736694677871) 50%, rgba(255,0,0,0.7316176470588236) 75%, rgba(255,0,0,0.6195728291316527) 87%, rgba(255,255,255,0) 100%);
+}
+#main-mid::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #02020201;
+}
+
+#main-mid::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #00000000;
+}
+
+#main-mid::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background: linear-gradient(180deg, rgba(18,130,59,0) 0%, rgba(255,0,0,0.4823179271708683) 12%, rgba(255,0,0,0.829656862745098) 35%, rgba(255,0,0,0.8716736694677871) 50%, rgba(255,0,0,0.7316176470588236) 75%, rgba(255,0,0,0.6195728291316527) 87%, rgba(255,255,255,0) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loader {
+    --dim: 3rem;
+    width: var(--dim);
+    height: var(--dim);
+    position: relative;
+    animation: spin988 2s linear infinite;
+    margin-top: 250px;
+    margin-left: 700px;
+  }
+  
+  .loader .circle {
+    --color: #ffffff;
+    --dim: 1.2rem;
+    width: var(--dim);
+    height: var(--dim);
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid red;
+  }
+  
+  .loader .circle:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  .loader .circle:nth-child(2) {
+    top: 0;
+    right: 0;
+    
+  }
+  
+  .loader .circle:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .loader .circle:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    
+  }
+  
+  @keyframes spin988 {
+    0% {
+      transform: scale(1) rotate(0);
+    }
+  
+    20%, 25% {
+      transform: scale(1.3) rotate(90deg);
+    }
+  
+    45%, 50% {
+      transform: scale(1) rotate(180deg);
+    }
+  
+    70%, 75% {
+      transform: scale(1.3) rotate(270deg);
+    }
+  
+    95%, 100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
