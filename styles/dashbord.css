@@ -150,6 +150,10 @@ nav>img{
     text-align: center;
     /* border: 1px solid red; */
 }
+#main-right>img{
+    width: 93.89%;
+    /* height: 100%; */
+}
 #addForm{
     border: 1px solid rgb(255, 255, 255);
     height: 70%;
@@ -464,9 +468,66 @@ nav>img{
     width: 100%;
     height: 300px;
 }
+#tablePart{
+    width: 90%;
+    margin:50px auto;
+    /* border: 1px solid red; */
+    height: 100%;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(255, 255, 255);
+    width: 12%;
+    height: 60px;
+    color: balck;
+    font-size: 18px;
+    color: #000000;
+}
 
+#delete{
+    /* padding-right: 20px; */
+}
+td{
+    width: 14%;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
 
+tr>td:nth-child(5)>button{
+    width: 40%;
+    margin: auto;
+    font-size: 10px;
+    color: white;
+    background-color:red;
+    border: 0px;
+    height: 60%;
+    border-radius: 5px;
+    font-weight: 800;
+    
+}
+tr>td:nth-child(5){
+    /* padding-right: 5px; */
+}
 
+tr>td:nth-child(5)>button:hover{
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+    border: 2px solid rgb(255, 0, 0);
+    color: red;
+}
+.odd>td{
+    background-color: rgba(255, 255, 255, 0.127);
+}
+td>img{
+    width: 10%;
+}
+td{
+    color: white;
+}
 
 #main-right::-webkit-scrollbar-track
 {
@@ -505,8 +566,64 @@ nav>img{
 	background: linear-gradient(180deg, rgba(18,130,59,0) 0%, rgba(255,0,0,0.4823179271708683) 12%, rgba(255,0,0,0.829656862745098) 35%, rgba(255,0,0,0.8716736694677871) 50%, rgba(255,0,0,0.7316176470588236) 75%, rgba(255,0,0,0.6195728291316527) 87%, rgba(255,255,255,0) 100%);
 }
 
+#bottom{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#btm-data{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+#btm-data> div:nth-child(1) >h3{
+    width: 230px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 0, 0);
+    font-weight: 800;
+}
+#btm-data> div:nth-child(2) >h3{
+    width: 110px;
+    padding-bottom: 5px;
+    border-radius: 2px; font-weight: 800;
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+#btm-data> div:nth-child(3) >h3{
+    width: 245px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 0, 0);
+    font-weight: 800;
+}
+#btm-data> div >p{
+    font-size: 17px;
+    margin: 10px;
+    text-align: start;
+    cursor: pointer;
+    padding: 5px;
+}
+#btm-data> div >p:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px ;
+}
+#company{
+    border-bottom: 4px solid red;
+    width: 24%;
+    padding-bottom: 10px;
+    /* text-align: center; */
+    
+    margin: auto;
+    margin-bottom: 30px;
 
-
+}
 
 
 
