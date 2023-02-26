@@ -20,9 +20,9 @@ Kdisplaybutton(newdata)
 let Kinputdata=document.getElementById('inputdata')
 Kinputdata.addEventListener('input',()=>{ 
     lastchecked.checked=false
-    let p;
+    // let p;
     clearTimeout(p)
-     p=setTimeout(() => {
+    var p=setTimeout(() => {
         Kmakefilter(Kinputdata.value)
     }, 2000); 
 })
@@ -112,6 +112,7 @@ function Kshowfulldesc(element) {
 
 function closepop() {
     let Kdescrip=document.getElementById('Kdescrip')
+    Kdescrip.style.border='2px solid #1377c9'
     Kdescrip.style.display='none'
 }
 
@@ -226,7 +227,7 @@ function Kshowmessagewrong(data) {
     
         let gif=document.createElement('img')
         gif.setAttribute('class','Kgif')
-        gif.setAttribute('src','https://i.pinimg.com/originals/66/22/ab/6622ab37c6db6ac166dfec760a2f2939.gif')
+        gif.setAttribute('src','https://gifimage.net/wp-content/uploads/2018/05/shopping-cart-gif-8.gif')
 
         let h3=document.createElement('h3')
         let span=document.createElement('span')
@@ -343,10 +344,9 @@ Kpricestart.addEventListener('input',()=>{
 })
 Kpriceend.addEventListener('input',()=>{ 
     lastchecked.checked=false
-    let p;
     clearTimeout(p)
-    console.log(checkinput()&&localdata!=[],'a')
-    p=setTimeout(() => {
+    // console.log(checkinput()&&localdata!=[],'a')
+    var p=setTimeout(() => {
         if(checkinput()&&localdata!=[]){
             console.log('a')
             let newdata=Kformatdata(Kdata)
