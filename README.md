@@ -14,7 +14,7 @@ we build following 5 Pages of this website :-
 
 ● Home Page (index.html , home-page.css &  home-page.js) :- Jignesh is responsible for this page
     
-    ![Screenshot (326)](https://user-images.githubusercontent.com/108655504/221424799-3aa6a542-7f35-4f2d-9bd2-54ecbc3c3c7d.png)
+    ![Screenshot (326)](https://user-images.githubusercontent.com/108655504/221425405-b59c9a4c-63db-4bfc-a9d4-d0d8408adeb0.png)
     
     
     
