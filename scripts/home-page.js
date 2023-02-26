@@ -70,7 +70,7 @@ userSignInBtn.addEventListener('submit', (e) => {
                 getUserData(user.uid)
                 setTimeout(() => {
                     window.location.reload()
-                }, 1500)
+                }, 2000)
             }
             // onAuthStateChanged(auth, (user) => {
             //     if (user) {
@@ -141,9 +141,7 @@ if (userDetails) {
 
     userDataText.append(userName, userPra, userLogOutBtn)
 }
-// else if (userDetails == undefined) {
-//    location.href = ''
-// }
+
 
 
 
