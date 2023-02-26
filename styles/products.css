@@ -65,6 +65,7 @@ main{
     /* bottom: 0; */
     z-index: 0;
 }
+
 footer{
     position: relative;
     z-index: 1;
