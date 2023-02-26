@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 main{
     margin-top: 20px;
 }
@@ -31,6 +33,8 @@ main{
     border: 2px solid #1377c9;
     background-color:white;
     color: black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 #Krateingfilter>label{
@@ -59,11 +63,13 @@ main{
     position: fixed;
     /* right: 30px; */
     /* bottom: 0; */
+    z-index: 0;
+}
+
+footer{
+    position: relative;
     z-index: 1;
 }
-/* #btm-data{
-    z-index: 20;
-} */
 #Kpricefilter{
     font-size: 20px;
     margin-top: 20px;
@@ -97,7 +103,8 @@ main{
 }
 #Kmaindiv{
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns:80%;
+    justify-content: right;
 }
 .Kbigdiskdiv{
     display: grid;
