@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>payment</title>
 	<link rel="stylesheet" type="text/css" href="./styles/checkout_page.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <header>
@@ -73,7 +74,7 @@
 					</label>
 				</div>
 			</form>
-			<input type="submit" name="" value="Proceed to Checkout">
+			<input type="submit" name="" id="purchaseSmTBtn" value="Proceed to Checkout">
 		</div>
     <div id="gap" >
       <h3 >PRODUCT DETAILS</h3>
@@ -93,4 +94,18 @@
  
 </header>
 </body>
+<script>
+
+	let submitBTn = document.getElementById("purchaseSmTBtn");
+	submitBTn.addEventListener('click' , ()=>{
+		Swal.fire(
+        'congratulation',
+        'Order Placed sucsessfull!',
+        'success',
+        setTimeout(() => {
+            location.href = "index.html"
+        }, 3000)
+    )
+	})
+</script>
 </html>
