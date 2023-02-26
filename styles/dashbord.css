@@ -624,8 +624,38 @@ td{
     margin-bottom: 30px;
 
 }
+#btm-data>div:nth-child(4)>h3 {
+    width: 150px;
+    padding-bottom: 5px;
+    border-radius: 2px;
+    border-bottom: 4px solid rgb(255, 0, 0);
+}
+#btm-data>div:nth-child(4)>p {
+    text-decoration: none;
+}
+  #btm-data>div>a{
+    color: white;
+    font-size: px;
+    margin: 10px;
+    text-align: start;
+    text-decoration:none;
+  }
 
-
+  #btm-data>div>a>:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px ; 
+  }
+  #btm-data>div>a>p:hover{
+    background-color: white;
+    color: black;
+    border-radius: 10px ; 
+  }
+  #btm-data>div>a>p>i:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* border-radius: 10px ;  */
+  }
 
 
 
