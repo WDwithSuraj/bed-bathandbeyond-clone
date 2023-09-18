@@ -73,8 +73,8 @@ function Kshowdata(data) {
             Kpushdata=element
         })
         let temp=`
-        <img src="${element.image[0]}" alt="">
-        <p>${element.title}</p>
+        <img src="${element.img}" alt="">
+        <p>${element.name}</p>
         <p class='cardprice'>$ ${element.price}</p>
         <p class='Kblue'>${karan}</p>
         `
@@ -93,7 +93,7 @@ function Kshowfulldesc(element) {
     <p class='Kbigdiscp' onclick="closepop()">&#x2613</p>
     <div class='Kbigdiskdiv'>
      <div id="slider">
-      <img id='imgsrc' src="${element.image[0]}" alt="">
+      <img id='imgsrc' src="${element.img}" alt="">
      </div>
      <div id='cartelement'>
       <h3>${element.title}</h3>
@@ -193,7 +193,7 @@ function Kshowmessage(data) {
         div.setAttribute('class','cartmessbutt')
 
         let img=document.createElement('img')
-        img.setAttribute('src',data.image[0])
+        img.setAttribute('src',data.img)
 
         let div2=document.createElement('div')
         let p1=document.createElement('p')
@@ -243,7 +243,7 @@ function Kshowmessagewrong(data) {
         div.setAttribute('class','cartmessbutt')
 
         let img=document.createElement('img')
-        img.setAttribute('src',data.image[0])
+        img.setAttribute('src',data.img)
 
         let div2=document.createElement('div')
         let p1=document.createElement('p')

@@ -98,8 +98,15 @@ footer{
     padding-left: 10px;
 }
 
+.Kcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .Kcard>img{
-    width: 100%;
+    width: 70%;
+    height: 15rem;
 }
 #Kmaindiv{
     display: grid;
